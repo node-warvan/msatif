@@ -2,9 +2,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const pacarName = "Meira"; // Ganti dengan nama pacar
     document.getElementById("pacarName").innerText = pacarName;
 
-    // Memulai backsound musik
-    const backgroundMusic = document.getElementById("backgroundMusic");
-    backgroundMusic.play();
+    // Menampilkan pesan instruksi untuk memulai musik
+    const instruction = document.getElementById("instruction");
+    instruction.addEventListener('click', function() {
+        const backgroundMusic = document.getElementById("backgroundMusic");
+        backgroundMusic.play();
+        // Menghilangkan pesan instruksi setelah musik dimulai
+        instruction.style.display = "none";
+    });
 
     const gallery = document.getElementById("gallery");
 
